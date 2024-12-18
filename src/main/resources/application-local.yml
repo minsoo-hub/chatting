@@ -1,12 +1,12 @@
 server:
   port: 7002
+
 springdoc:
   swagger-ui:
     enabled: true
     operations-sorter: method
+
 spring:
-  config:
-    import: optional:file:.env[.properties]
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
@@ -17,12 +17,3 @@ spring:
       max-file-size: 5MB
       max-request-size: 10MB
       enabled: true
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
-        show_sql: true
-        use_sql_comments: true
